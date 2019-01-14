@@ -1,7 +1,6 @@
 package com.medical.patientinfo.dao;
 
 import com.medical.patientinfo.entity.User_profile;
-import io.swagger.models.auth.In;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
