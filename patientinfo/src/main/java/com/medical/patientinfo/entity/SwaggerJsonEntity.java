@@ -33,10 +33,16 @@ public class SwaggerJsonEntity {
         private String[] produces;
 
         private Parameter[] parameters;
+
+        private Map<String, Map<String, Object>> responses;
     }
 
     @Data
     public static class Parameter {
+
+        private String format;
+
+        private String type;
 
         private String in;
 
@@ -45,6 +51,5 @@ public class SwaggerJsonEntity {
         private String description;
 
         private String required;
-
     }
 }
