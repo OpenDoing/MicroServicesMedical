@@ -17,7 +17,23 @@ public class SwaggerJsonEntity {
 
     private String swagger;
 
+    private Map<String, Definition> definitions;
+
     private Map<String, Map<String, RequestEntity>> paths;
+
+    @Data
+    public static class Definition {
+        private String type;
+
+        private Map<String, Property> properties;
+
+        @Data
+        public static class Property {
+            private String type;
+
+            private String format;
+        }
+    }
 
     @Data
     public static class RequestEntity {
@@ -51,5 +67,7 @@ public class SwaggerJsonEntity {
         private String description;
 
         private String required;
+
+        private Map<String, String> schema;
     }
 }
